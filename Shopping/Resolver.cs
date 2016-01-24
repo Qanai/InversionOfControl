@@ -9,6 +9,11 @@ namespace Shopping
     {
         private Dictionary<Type, Type> dependencyMap = new Dictionary<Type, Type>();
 
+        public void Register<TFrom, TTo>()
+        {
+            dependencyMap.Add(typeof(TFrom), typeof(TTo));
+        }
+
         public T Resolve<T>()
         {
             return (T)Resolve(typeof(T));
@@ -28,7 +33,20 @@ namespace Shopping
                 throw new Exception(string.Format("Cannot resolve type {0}", typeToResolve.FullName));
             }
 
-            return resolvedType;
+            var firstConstructor = resolvedType.GetConstructors().First();
+            var constructorParameters = firstConstructor.GetParameters();
+            if (constructorParameters.Count() == 0)
+            {
+                return Activator.CreateInstance(resolvedType);
+            }
+
+            IList<object> parameters = new List<object>();
+            foreach (var parameterToResolve in constructorParameters)
+            {
+                parameters.Add(Resolve(parameterToResolve.ParameterType));
+            }
+
+            return firstConstructor.Invoke(parameters.ToArray());
         }
     }
 }
