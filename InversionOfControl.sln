@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainerDemo", "IoCContainerDemo\IoCContainerDemo.csproj", "{6194287C-CE26-4EE4-BAE2-E61A29CB7C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping", "Shopping\Shopping.csproj", "{9BB1129C-7DC3-46B5-B9FC-5B7A37DB709F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6194287C-CE26-4EE4-BAE2-E61A29CB7C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6194287C-CE26-4EE4-BAE2-E61A29CB7C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6194287C-CE26-4EE4-BAE2-E61A29CB7C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6194287C-CE26-4EE4-BAE2-E61A29CB7C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB1129C-7DC3-46B5-B9FC-5B7A37DB709F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB1129C-7DC3-46B5-B9FC-5B7A37DB709F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB1129C-7DC3-46B5-B9FC-5B7A37DB709F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB1129C-7DC3-46B5-B9FC-5B7A37DB709F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
